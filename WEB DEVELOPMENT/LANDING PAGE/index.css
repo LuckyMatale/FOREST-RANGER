@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e2e2e2;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 1350px;
+    margin: auto;
+    margin-top: 5px;
+    border-radius: 20px;
+    background-color: #004080;
+    box-shadow: 10px 10px 5px #969595dd;
+
+
+}
+
+.logo h1 {
+    font-size: 30px;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/*dropdown button*/
+.dropbtn {
+    background-color: #004080;
+    color: white;
+    padding: 0px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+/* hidding dropdown content by default*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(54, 54, 54);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px gray;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+/* links to the drop down*/
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 15px;
+}
+
+/*changing colour of dropdown links upon hover*/
+.dropdown-content a:hover {
+    background-color: #004080;
+}
+
+/* showing drop menu on hover*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*changing the color of dropdown when hovered on*/
+.dropdown:hover .dropbtn {
+    background-color:#004080;
+}
+
+
+.hero {
+    position: relative;
+    height: 85vh;
+    margin: auto;
+    width: 207vh;
+    border-radius: 30px;
+    margin-top: 20px;
+    background: url('images/home.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+}
+
+.live-button {
+    padding: 15px 30px;
+    background-color: #0026ff;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+.live-button:hover :after{
+    background-color: #333;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 30px;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+}
+
+@media (max-width: 900px)
+{
+  section span 
+  {
+    width: calc(10vw - 2px);
+    height: calc(10vw - 2px);
+  }
+}
+@media (max-width: 600px)
+{
+  section span 
+  {
+    width: calc(20vw - 2px);
+    height: calc(20vw - 2px);
+  }
+}

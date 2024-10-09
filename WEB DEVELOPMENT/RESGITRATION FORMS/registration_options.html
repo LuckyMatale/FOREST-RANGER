@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Selection</title>
+    <link rel="stylesheet" href="registration_options2.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <!-- Dropdown for selecting login type -->
+        <select class="color" id="login-type" onchange="showLoginForm()">
+            <option value="">Select Your Login Type</option>
+            <option value="admin">Admin</option>
+            <option value="institution">Institution</option>
+            <option value="team">Team</option>
+            <option value="player">Player</option>
+        </select>
+
+        <!-- Admin Login Form -->
+        <form id="admin-form" class="login-form" action="admin-login.php" method="post" style="display:none;">
+            <h3>Admin Login</h3>
+            <label for="admin-username">Username:</label>
+            <input type="text" id="admin-username" name="admin-username" required>
+            <label for="admin-password">Password:</label>
+            <input type="password" id="admin-password" name="admin-password" required>
+            <input type="submit" value="Login">
+        </form>
+
+        <!-- Institution Login Form -->
+        <form id="institution-form" class="login-form" action="institution-login.php" method="post" style="display:none;">
+            <h3>Institution Login</h3>
+            <label for="institution-username">Institution Name:</label>
+            <input type="text" id="institution-username" name="institution-username" required>
+            <label for="institution-password">Password:</label>
+            <input type="password" id="institution-password" name="institution-password" required>
+            <input type="submit" value="Login">
+        </form>
+
+        <!-- Team Login Form -->
+        <form id="team-form" class="login-form" action="team-login.php" method="post" style="display:none;">
+            <h3>Team Login</h3>
+            <label for="team-username">Team Name:</label>
+            <input type="text" id="team-username" name="team-username" required>
+            <label for="team-password">Password:</label>
+            <input type="password" id="team-password" name="team-password" required>
+            <input type="submit" value="Login">
+        </form>
+
+        <!-- Player Login Form -->
+        <form id="player-form" class="login-form" action="player-login.php" method="post" style="display:none;">
+            <h3>Player Login</h3>
+            <label for="player-username">Player Name:</label>
+            <input type="text" id="player-username" name="player-username" required>
+            <label for="player-password">Password:</label>
+            <input type="password" id="player-password" name="player-password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script>
+        // Function to show the login form based on the dropdown selection
+        function showLoginForm() {
+            var selectedLogin = document.getElementById('login-type').value;
+
+            // Hide all forms
+            document.getElementById('admin-form').style.display = 'none';
+            document.getElementById('institution-form').style.display = 'none';
+            document.getElementById('team-form').style.display = 'none';
+            document.getElementById('player-form').style.display = 'none';
+
+            // Show the selected form if a valid option is chosen
+            if (selectedLogin) {
+                document.getElementById(selectedLogin + '-form').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution Dashboard - Teams & Fixtures</title>
+    <link rel="stylesheet" href="institution_dashboard.css">
+</head>
+<body>
+
+    <!-- Side Navigation Menu -->
+    <nav class="side-nav">
+        <ul>
+            <li><a href="#dashboard" class="active">Dashboard</a></li>
+            <li><a href="#register-teams">Register Teams</a></li>
+            <li><a href="#manage-teams">Manage Teams</a></li>
+            <li><a href="#fixtures">View Fixtures</a></li>
+            <li><a href="#results">View Results</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard">
+            <h2>Institution Dashboard</h2>
+            <p>Welcome to your institution dashboard. Here you can register and manage teams, view team fixtures, and results.</p>
+        </section>
+
+        <!-- Register Teams Section -->
+        <section id="register-teams">
+            <h2>Register New Teams</h2>
+            <form action="/register-team" method="POST">
+                <label for="team-name">Team Name:</label>
+                <input type="text" id="team-name" name="team_name" required>
+
+                <label for="sport">Sport Discipline:</label>
+                <select id="sport" name="sport" required>
+                    <option value="football">Football</option>
+                    <option value="basketball">Basketball</option>
+                    <option value="volleyball">Volleyball</option>
+                    <option value="athletics">Athletics</option>
+                    <!-- Add more disciplines as needed -->
+                </select>
+
+                <label for="coach">Coach Name:</label>
+                <input type="text" id="coach" name="coach" required>
+
+                <label for="members">Number of Team Members:</label>
+                <input type="number" id="members" name="members" min="1" required>
+
+                <button type="submit">Register Team</button>
+            </form>
+        </section>
+
+        <!-- Manage Teams Section -->
+        <section id="manage-teams">
+            <h2>Manage Registered Teams</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team Name</th>
+                        <th>Sport Discipline</th>
+                        <th>Coach</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alpha FC</td>
+                        <td>Football</td>
+                        <td>John Doe</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Beta B-ballers</td>
+                        <td>Basketball</td>
+                        <td>Jane Smith</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr>
+                    <!-- More rows for teams -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Fixtures Section (with Sport Discipline) -->
+        <section id="fixtures">
+            <h2>Upcoming Fixtures</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Team</th>
+                        <th>Opponent</th>
+                        <th>Sport Discipline</th> <!-- New Column -->
+                        <th>Venue</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-10-10</td>
+                        <td>Alpha FC</td>
+                        <td>Delta FC</td>
+                        <td>Football</td> <!-- New Column Data -->
+                        <td>Main Stadium</td>
+                        <td>14:00</td>
+                    </tr>
+                    <tr>
+                        <td>2024-10-12</td>
+                        <td>Beta B-ballers</td>
+                        <td>Gamma Team</td>
+                        <td>Basketball</td> <!-- New Column Data -->
+                        <td>Community Center</td>
+                        <td>16:30</td>
+                    </tr>
+                    <!-- More rows for fixtures -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Results Section -->
+        <section id="results">
+            <h2>Past Results</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Team</th>
+                        <th>Opponent</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2024-09-20</td>
+                        <td>Alpha FC</td>
+                        <td>Beta FC</td>
+                        <td>2 - 1 (Win)</td>
+                    </tr>
+                    <!-- More rows for results -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+</body>
+</html>

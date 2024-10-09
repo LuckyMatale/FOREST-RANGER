@@ -1,0 +1,76 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #004080;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 0 25px rgba(0, 0, 0, 1.2);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px;
+}
+
+h2 {
+    text-align: center;
+    color: #000000;
+}
+
+/* Dropdown styling */
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+}
+
+
+/* Form styles */
+.login-form {
+    display: none; /* Forms are hidden initially */
+}
+
+.login-form h3 {
+    text-align: center;
+    color: #000000;
+    font-weight: bold;
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #000000;
+}
+
+.login-form input[type="text"], 
+.login-form input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form input[type="submit"] {
+    width: 100%;
+    background-color: #1c78d4;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #004080;
+}

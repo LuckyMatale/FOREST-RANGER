@@ -1,0 +1,260 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #004080;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/*dropdown button*/
+.dropbtn {
+    background-color: #004080;
+    color: white;
+    padding: 0px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    /*padding-right: 5px;*/
+}
+
+/* hidding dropdown content by default*/                  
+.dropdown-content {
+    display: none;
+    text-decoration: none;
+    position: absolute;
+    background-color: rgb(54, 54, 54);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px gray;
+    z-index: 1;
+    border-radius: 15px;
+}
+
+/* links to the drop down*/
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 15px;
+}
+
+/*changing colour of dropdown links upon hover*/
+.dropdown-content a:hover {
+    background-color: #004080;
+}
+
+/* showing drop menu on hover*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*changing the color of dropdown when hovered on*/
+.dropdown:hover .dropbtn {
+    background-color:#004080;
+}
+
+/* Tournament Overview */
+.tournament-overview {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tournament-overview h2 {
+    color: #004080;
+    font-size: 1.8em;
+}
+
+.tournament-overview img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+}
+
+/* Fixtures Table */
+.schedule {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.schedule h2 {
+    color: #004080;
+    font-size: 1.8em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #004080;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Teams Section */
+.teams {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.teams h2 {
+    color: #004080;
+    font-size: 1.8em;
+}
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team {
+    flex: 1 1 200px;
+    margin: 10px;
+    text-align: center;
+}
+
+.team img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.team p {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Executive Team Section */
+.executive-team {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.executive-team h2 {
+    color: #004080;
+    font-size: 1.8em;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.team-member h3 {
+    color: #333;
+    font-size: 1.4em;
+}
+
+.team-member p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Sports Disciplines Section */
+.sports-disciplines {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sports-disciplines h2 {
+    color: #004080;
+    font-size: 1.8em;
+}
+
+.sports-disciplines h3 {
+    color: #333;
+    margin-top: 20px;
+    font-size: 1.4em;
+}
+
+.sports-disciplines p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #004080;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
