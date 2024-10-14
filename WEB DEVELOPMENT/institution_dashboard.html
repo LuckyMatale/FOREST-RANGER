@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Institution Dashboard - Teams & Fixtures</title>
+    <title>Institution Dashboard</title>
     <link rel="stylesheet" href="institution_dashboard.css">
+    <style>
+        .highlight { background-color: #f0f0f0; }
+    </style>
 </head>
 <body>
 
@@ -29,26 +32,15 @@
 
         <!-- Register Teams Section -->
         <section id="register-teams">
-            <h2>Register New Teams</h2>
-            <form action="/register-team" method="POST">
-                <label for="team-name">Team Name:</label>
-                <input type="text" id="team-name" name="team_name" required>
+            <h2>Register Teams</h2>
+            <form id="registerTeamForm">
+                <label for="teamName">Team Name:</label>
+                <input type="text" id="teamName" name="teamName" required>
+                <label for="sportDiscipline">Sport Discipline:</label>
 
-                <label for="sport">Sport Discipline:</label>
-                <select id="sport" name="sport" required>
-                    <option value="football">Football</option>
-                    <option value="basketball">Basketball</option>
-                    <option value="volleyball">Volleyball</option>
-                    <option value="athletics">Athletics</option>
-                    <!-- Add more disciplines as needed -->
-                </select>
-
-                <label for="coach">Coach Name:</label>
-                <input type="text" id="coach" name="coach" required>
-
-                <label for="members">Number of Team Members:</label>
-                <input type="number" id="members" name="members" min="1" required>
-
+                <input type="text" id="sportDiscipline" name="sportDiscipline" required>
+                <label for="coachName">Coach Name:</label>
+                <input type="text" id="coachName" name="coachName" required>
                 <button type="submit">Register Team</button>
             </form>
         </section>
@@ -56,7 +48,7 @@
         <!-- Manage Teams Section -->
         <section id="manage-teams">
             <h2>Manage Registered Teams</h2>
-            <table>
+            <table id="teamsTable">
                 <thead>
                     <tr>
                         <th>Team Name</th>
@@ -66,24 +58,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Alpha FC</td>
-                        <td>Football</td>
-                        <td>John Doe</td>
-                        <td>
-                            <button>Edit</button>
-                            <button>Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Beta B-ballers</td>
-                        <td>Basketball</td>
-                        <td>Jane Smith</td>
-                        <td>
-                            <button>Edit</button>
-                            <button>Delete</button>
-                        </td>
-                    </tr>
                     <!-- More rows for teams -->
                 </tbody>
             </table>
@@ -92,37 +66,23 @@
         <!-- Fixtures Section (with Sport Discipline) -->
         <section id="fixtures">
             <h2>Upcoming Fixtures</h2>
-            <table>
+            <input type="text" id="searchInput" placeholder="Search fixtures...">
+            <table id="fixturesTable">
                 <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Team</th>
-                        <th>Opponent</th>
-                        <th>Sport Discipline</th> <!-- New Column -->
-                        <th>Venue</th>
-                        <th>Time</th>
+                        <th onclick="sortTable(0)">Date</th>
+                        <th onclick="sortTable(1)">Team</th>
+                        <th onclick="sortTable(2)">Sport Discipline</th>
+                        <th onclick="sortTable(3)">Venue</th>
+                        <th onclick="sortTable(4)">Time</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>2024-10-10</td>
-                        <td>Alpha FC</td>
-                        <td>Delta FC</td>
-                        <td>Football</td> <!-- New Column Data -->
-                        <td>Main Stadium</td>
-                        <td>14:00</td>
-                    </tr>
-                    <tr>
-                        <td>2024-10-12</td>
-                        <td>Beta B-ballers</td>
-                        <td>Gamma Team</td>
-                        <td>Basketball</td> <!-- New Column Data -->
-                        <td>Community Center</td>
-                        <td>16:30</td>
-                    </tr>
+                    
                     <!-- More rows for fixtures -->
                 </tbody>
             </table>
+            <button id="addRowButton">Add Row</button>
         </section>
 
         <!-- Results Section -->
@@ -150,5 +110,6 @@
         </section>
     </div>
 
+    <script src="institution.js"></script>
 </body>
 </html>
